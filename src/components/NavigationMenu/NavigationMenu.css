@@ -1,0 +1,19 @@
+.navigation-menu {
+  display: flex;
+  gap: 15px;
+}
+
+.link {
+  padding: 2px 5px;
+  cursor: pointer;
+}
+
+.link:hover {
+  background-color: #2e442e63;
+  border-radius: 5px;
+}
+
+.list-link {
+  border-bottom: 2px solid #2e442e;
+  border-radius: 5px;
+}

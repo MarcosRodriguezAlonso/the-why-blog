@@ -5,8 +5,8 @@ import "./MainContainer.css";
 const MainContainer = (): React.ReactElement => {
   return (
     <div className="main-container">
-      <NavigationMenu />
       <Header />
+      <NavigationMenu />
     </div>
   );
 };
