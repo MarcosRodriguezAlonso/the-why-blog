@@ -1,4 +1,4 @@
-import "./NavigationMenu.css";
+import "./NavigationMenu.scss";
 
 const NavigationMenu = (): React.ReactElement => {
   return (
