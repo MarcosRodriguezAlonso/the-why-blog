@@ -1,6 +1,6 @@
 import Header from "../Header/Header";
 import NavigationMenu from "../NavigationMenu/NaviagationMenu";
-import "./MainContainer.css";
+import "./MainContainer.scss";
 
 const MainContainer = (): React.ReactElement => {
   return (
