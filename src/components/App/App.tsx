@@ -1,5 +1,5 @@
 import Header from "../Header/Header";
-import NavigationMenu from "../NavigationMenu/NaviagationMenu";
+import NavigationMenu from "../NavigationMenu/NavigationMenu";
 import "./App.css";
 
 const MainContainer = (): React.ReactElement => {
