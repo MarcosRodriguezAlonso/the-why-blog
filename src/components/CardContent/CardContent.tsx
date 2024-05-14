@@ -6,7 +6,7 @@ interface PostProps {
 
 const PostCard = (props: PostProps): React.ReactElement => {
   return (
-    <article className="Post">
+    <article className="post">
       <h2 className="post__title">{props.post.title}</h2>
     </article>
   );
