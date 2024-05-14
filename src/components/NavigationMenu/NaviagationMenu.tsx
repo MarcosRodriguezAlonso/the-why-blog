@@ -3,10 +3,10 @@ import "./NavigationMenu.css";
 const NavigationMenu = (): React.ReactElement => {
   return (
     <nav className="navigation-menu">
-      <a className="link list-link" href="list">
+      <a className="link" href="list">
         List
       </a>
-      <a className="link add-link" href="Add">
+      <a className="link" href="add">
         Add
       </a>
     </nav>
