@@ -1,6 +1,6 @@
-import Post from "./types";
+import { Post, PostDataWithoutId } from "./types";
 
-const newPost = async (postData: Omit<Post, "id">): Promise<Post> => {
+const newPost = async (postData: PostDataWithoutId): Promise<Post> => {
   try {
     const response = await fetch(import.meta.env.VITE_API_URL, {
       method: "POST",
