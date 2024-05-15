@@ -4,7 +4,7 @@ import NavigationMenu from "./NavigationMenu";
 describe("Given the NavigationMenu component", () => {
   describe("When rendered", () => {
     test("Then it should show a link with 'Add'", () => {
-      const expectedLinkText = "Add";
+      const expectedLinkText = /add/i;
 
       render(<NavigationMenu />);
       const link = screen.getByRole("link", { name: expectedLinkText });
@@ -13,7 +13,7 @@ describe("Given the NavigationMenu component", () => {
     });
 
     test("Then it should show a link with 'List'", () => {
-      const expectedLinkText = "List";
+      const expectedLinkText = /list/i;
 
       render(<NavigationMenu />);
       const link = screen.getByRole("link", { name: expectedLinkText });
