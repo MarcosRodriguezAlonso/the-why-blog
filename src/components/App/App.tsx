@@ -1,8 +1,8 @@
 import Header from "../Header/Header";
 import NavigationMenu from "../NavigationMenu/NavigationMenu";
-import "./App.css";
+import "./App.scss";
 
-const MainContainer = (): React.ReactElement => {
+const App = (): React.ReactElement => {
   return (
     <div className="main-container">
       <Header />
@@ -11,4 +11,4 @@ const MainContainer = (): React.ReactElement => {
   );
 };
 
-export default MainContainer;
+export default App;
