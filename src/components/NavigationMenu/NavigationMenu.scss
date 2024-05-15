@@ -1,4 +1,4 @@
-.navigation-menu {
+.navigation-menu * {
   display: flex;
   gap: 15px;
   margin: 5px 0;
@@ -6,7 +6,6 @@
 
 .link {
   padding: 2px 5px;
-  cursor: pointer;
 
   &:hover {
     background-color: #2e442e63;
@@ -14,7 +13,7 @@
   }
 }
 
-.list-link {
+.activated {
   border-bottom: 2px solid #2e442e;
   border-radius: 5px;
 }
