@@ -5,7 +5,7 @@ const NavigationMenu = (): React.ReactElement => {
     <nav className="navigation-menu">
       <ul>
         <li>
-          <a className="link activated" href="list">
+          <a className="link active" href="list">
             List
           </a>
         </li>

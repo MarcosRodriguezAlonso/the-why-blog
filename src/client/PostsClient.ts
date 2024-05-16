@@ -2,14 +2,14 @@ import { Post, PostDataWithoutId } from "../posts/types";
 import { PostClientstructure } from "./types";
 
 class PostsClient implements PostClientstructure {
-  async getPost(): Promise<Post[]> {
+  async getPosts(): Promise<Post[]> {
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL);
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/posts`);
       const posts = (await response.json()) as Post[];
 
       return posts;
     } catch (error) {
-      throw new Error("Server failed to load POSTS");
+      throw new Error("Server failed ");
     }
   }
 
@@ -29,5 +29,6 @@ class PostsClient implements PostClientstructure {
     }
   }
 }
+const postClient = new PostsClient();
 
-export default PostsClient;
+export default postClient;

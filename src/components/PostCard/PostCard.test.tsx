@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import PostCard from "./PostCard";
+import PostsCard from "./PostCard";
 import { Post } from "../../posts/types";
 
 describe("Given the PostCard component", () => {
@@ -14,7 +14,7 @@ describe("Given the PostCard component", () => {
         title: "Las arañas de ocho patas",
       };
 
-      render(<PostCard post={post} />);
+      render(<PostsCard post={post} />);
 
       const title = screen.getByRole("heading", {
         name: expectedTitle,

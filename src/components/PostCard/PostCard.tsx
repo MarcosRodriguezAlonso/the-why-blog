@@ -4,7 +4,7 @@ interface PostCardProps {
   post: Post;
 }
 
-const PostCard = ({ post }: PostCardProps): React.ReactElement => {
+const PostsCard = ({ post }: PostCardProps): React.ReactElement => {
   return (
     <article className="post">
       <h2 className="post__title">{post.title}</h2>
@@ -12,4 +12,4 @@ const PostCard = ({ post }: PostCardProps): React.ReactElement => {
   );
 };
 
-export default PostCard;
+export default PostsCard;

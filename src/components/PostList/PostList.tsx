@@ -1,5 +1,5 @@
 import { Post } from "../../posts/types";
-import PostCard from "../PostCard/PostCard";
+import PostsCard from "../PostCard/PostCard";
 
 interface PostsListProps {
   postsList: Post[];
@@ -12,7 +12,7 @@ const PostsList = ({
     <ul className="posts">
       {postsList.map((post) => (
         <li>
-          <PostCard post={post} />
+          <PostsCard post={post} />
         </li>
       ))}
     </ul>
