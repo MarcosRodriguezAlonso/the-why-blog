@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import PostsCard from "./PostCard";
 import { Post } from "../../posts/types";
+import PostCard from "./PostCard";
 
 describe("Given the PostCard component", () => {
   const post: Post = {
