@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import PostCard from "./PostCard";
-import Post from "../../posts/types";
+import { Post } from "../../posts/types";
 
 describe("Given the PostCard component", () => {
   describe("When rendered", () => {
