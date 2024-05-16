@@ -2,13 +2,15 @@ import { Post } from "../../posts/types";
 import PostCard from "../PostCard/PostCard";
 
 interface PostsListProps {
-  postList: Post[];
+  postsList: Post[];
 }
 
-const PostList = ({ postList }: PostsListProps): React.ReactElement => {
+const PostsList = ({
+  postsList: postsList,
+}: PostsListProps): React.ReactElement => {
   return (
     <ul className="posts">
-      {postList.map((post) => (
+      {postsList.map((post) => (
         <li>
           <PostCard post={post} />
         </li>
@@ -17,4 +19,4 @@ const PostList = ({ postList }: PostsListProps): React.ReactElement => {
   );
 };
 
-export default PostList;
+export default PostsList;
