@@ -1,4 +1,4 @@
-import Post from "../../posts/types";
+import { Post } from "../../posts/types";
 
 interface PostCardProps {
   post: Post;
@@ -18,6 +18,8 @@ const PostCard = ({ post }: PostCardProps): React.ReactElement => {
         className="post__image"
         src={post.imageUrl}
         alt={post.alternativeText}
+        width="400"
+        height="400"
       />
       <p className="post__content">{slicedPostContent}</p>
     </article>

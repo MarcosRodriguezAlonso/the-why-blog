@@ -1,4 +1,4 @@
-interface Post {
+export interface Post {
   id: string;
   title: string;
   author: string;
@@ -8,4 +8,4 @@ interface Post {
   alternativeText: string;
 }
 
-export default Post;
+export type PostDataWithoutId = Omit<Post, "id">;
