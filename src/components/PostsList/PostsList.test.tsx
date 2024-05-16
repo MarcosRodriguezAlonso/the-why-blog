@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
 import { Post } from "../../posts/types";
-import PostsList from "./PostList";
+import PostsList from "./PostsList";
 
 describe("Given the PostList component", () => {
   describe("When it receives a post list with the titles 'Why the platypus' and 'Why the raccoon'", () => {
