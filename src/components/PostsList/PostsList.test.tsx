@@ -9,15 +9,19 @@ describe("Given the PostList component", () => {
         title: "Why the platypus",
         author: "",
         content: "",
-        date: 0,
+        date: new Date(),
         id: "",
+        alternativeText: "",
+        imageUrl: "",
       },
       {
         title: "Why the raccoon",
         author: "",
         content: "",
-        date: 0,
+        date: new Date(),
         id: "",
+        alternativeText: "",
+        imageUrl: "",
       },
     ];
 
