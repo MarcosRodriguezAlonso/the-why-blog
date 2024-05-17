@@ -1,17 +1,15 @@
-import { Post, PostDataWithoutId } from "../posts/types";
+import { Post, PostDataWithoutId, PostDto } from "../posts/types";
 import { PostClientstructure } from "./types";
 
 class PostsClient implements PostClientstructure {
   async getPosts(): Promise<Post[]> {
     try {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/posts`);
-      const posts = (await response.json()) as Post[];
+      const posts = (await response.json()) as PostDto[];
 
-      posts.map((post) => {
-        post.date = new Date(post.date);
+      return posts.map<Post>((post) => {
+        return { ...post, date: new Date(post.date) };
       });
-
-      return posts;
     } catch (error) {
       throw new Error("Server failed ");
     }
@@ -19,7 +17,7 @@ class PostsClient implements PostClientstructure {
 
   async addNewPost(postData: PostDataWithoutId): Promise<Post> {
     try {
-      const response = await fetch(import.meta.env.VITE_API_URL, {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/posts`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
