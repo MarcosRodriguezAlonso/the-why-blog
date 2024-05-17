@@ -28,8 +28,8 @@ describe("Given the PostCard component", () => {
     });
   });
 
-  describe("When it receives a post with an author: 'Macario'", () => {
-    test("Then it should show a text with an author 'Macario'", () => {
+  describe("When it receives a post with 'Macario'", () => {
+    test("Then it should show a text with a'Macario'", () => {
       const expectedAuthor = /macario/i;
 
       render(<PostCard post={post} />);
@@ -40,9 +40,9 @@ describe("Given the PostCard component", () => {
     });
   });
 
-  describe("When it receives a post with a date: 1714751590000", () => {
-    test("Then it should show a date with 'Fri May 03 2024'", () => {
-      const expectedDate = "Fri May 03 2024";
+  describe("When it receives a post with the date: '3/5/2024'", () => {
+    test("Then it should show a date with '3/5/2024'", () => {
+      const expectedDate = "3/5/2024";
 
       render(<PostCard post={post} />);
 
@@ -52,8 +52,8 @@ describe("Given the PostCard component", () => {
     });
   });
 
-  describe("When it receives a post with an alternative text: 'una araña'", () => {
-    test("Then it should show an alternative text 'una araña'", () => {
+  describe("When it receives a post with an image with the alternative text: 'una araña'", () => {
+    test("Then it should show an image with the alternative text 'una araña'", () => {
       const expectedAlternativeText = /una araña/i;
 
       render(<PostCard post={post} />);
