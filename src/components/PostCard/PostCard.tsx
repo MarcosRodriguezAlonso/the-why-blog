@@ -4,7 +4,7 @@ interface PostCardProps {
   post: Post;
 }
 
-const PostsCard = ({ post }: PostCardProps): React.ReactElement => {
+const PostCard = ({ post }: PostCardProps): React.ReactElement => {
   const slicedPostContent = post.content.slice(0, 200);
 
   const actualDate = new Date(post.date).toDateString();
@@ -18,12 +18,12 @@ const PostsCard = ({ post }: PostCardProps): React.ReactElement => {
         className="post__image"
         src={post.imageUrl}
         alt={post.alternativeText}
-        width="400"
-        height="400"
+        width="150"
+        height="150"
       />
       <p className="post__content">{slicedPostContent}</p>
     </article>
   );
 };
 
-export default PostsCard;
+export default PostCard;

@@ -6,7 +6,8 @@ export const claraMockPost: Post = {
   title: "Porque el ornitorrinco no suda",
   date: new Date(17147515),
   id: "clarapost",
-  imageUrl: "",
+  imageUrl:
+    "https://toystnt.com/pictures/750_ef9802ce0ca9857e94067fa9a9ee4c68.jpg",
   alternativeText: "",
 };
 
@@ -16,7 +17,8 @@ export const marcosMockPost: Post = {
   date: new Date(17147515),
   title: "Porque las canicas",
   id: "marcospost",
-  imageUrl: "",
+  imageUrl:
+    "https://toystnt.com/pictures/750_ef9802ce0ca9857e94067fa9a9ee4c68.jpg",
   alternativeText: "",
 };
 
