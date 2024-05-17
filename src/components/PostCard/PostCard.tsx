@@ -4,16 +4,16 @@ interface PostCardProps {
   post: Post;
 }
 
-const PostsCard = ({ post }: PostCardProps): React.ReactElement => {
-  const slicedPostContent = post.content.slice(0, 200);
+const PostCard = ({ post }: PostCardProps): React.ReactElement => {
+  const contentPreview = post.content.slice(0, 200);
 
-  const actualDate = new Date(post.date).toDateString();
+  const formattedDate = post.date.toLocaleDateString("es-ES");
 
   return (
     <article className="post">
       <h2 className="post__title">{post.title}</h2>
-      <div className="post__author">{post.author}</div>
-      <div className="post__date">{actualDate}</div>
+      <span className="post__author">{post.author}</span>
+      <span className="post__date">{formattedDate}</span>
       <img
         className="post__image"
         src={post.imageUrl}
@@ -21,9 +21,9 @@ const PostsCard = ({ post }: PostCardProps): React.ReactElement => {
         width="400"
         height="400"
       />
-      <p className="post__content">{slicedPostContent}</p>
+      <p className="post__content">{contentPreview}</p>
     </article>
   );
 };
 
-export default PostsCard;
+export default PostCard;
