@@ -11,7 +11,7 @@ const PostsList = ({
   return (
     <ul className="posts">
       {postsList.map((post) => (
-        <li>
+        <li key={post.id}>
           <PostCard post={post} />
         </li>
       ))}

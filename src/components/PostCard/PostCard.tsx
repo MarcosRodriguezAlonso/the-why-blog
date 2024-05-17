@@ -7,7 +7,7 @@ interface PostCardProps {
 const PostCard = ({ post }: PostCardProps): React.ReactElement => {
   const contentPreview = post.content.slice(0, 200);
 
-  const formattedDate = post.date.toLocaleDateString();
+  const formattedDate = post.date.toLocaleDateString("es-ES");
 
   return (
     <article className="post">
