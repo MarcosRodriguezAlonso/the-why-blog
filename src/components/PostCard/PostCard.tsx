@@ -1,4 +1,5 @@
 import { Post } from "../../posts/types";
+import "./PostCard.scss";
 
 interface PostCardProps {
   post: Post;
@@ -18,8 +19,8 @@ const PostCard = ({ post }: PostCardProps): React.ReactElement => {
         className="post__image"
         src={post.imageUrl}
         alt={post.alternativeText}
-        width="400"
-        height="400"
+        width="150"
+        height="150"
       />
       <p className="post__content">{contentPreview}</p>
     </article>
