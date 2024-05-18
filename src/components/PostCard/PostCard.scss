@@ -1,6 +1,21 @@
 @use "../../styles/mixin";
 
 .post {
-  align-items: center;
+  background-color: #b0ddc98a;
+  padding: 16px;
   @include mixin.display-flex-column;
+  gap: 8px;
+  box-shadow: 0 0 8px #24272580;
+  border-radius: 5px;
+
+  &__data {
+    display: flex;
+    gap: 8px;
+  }
+
+  &__autorship {
+    display: flex;
+    gap: 8px;
+    font-style: italic;
+  }
 }
