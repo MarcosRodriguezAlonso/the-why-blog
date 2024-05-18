@@ -40,7 +40,7 @@ describe("Given the PostCard component", () => {
     });
   });
 
-  describe("When it receives a post with the date: '3/5/2024'", () => {
+  describe("When it receives a post with a date:'3/5/2024' ", () => {
     test("Then it should show a date with '3/5/2024'", () => {
       const expectedDate = "3/5/2024";
 
