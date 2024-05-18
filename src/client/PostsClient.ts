@@ -7,9 +7,10 @@ class PostsClient implements PostClientstructure {
       const response = await fetch(`${import.meta.env.VITE_API_URL}/posts`);
       const posts = (await response.json()) as PostDto[];
 
-      return posts.map<Post>((post) => {
-        return { ...post, date: new Date(post.date) };
-      });
+      return posts.map<Post>((post) => ({
+        ...post,
+        date: new Date(post.date),
+      }));
     } catch (error) {
       throw new Error("Server failed ");
     }
@@ -25,7 +26,9 @@ class PostsClient implements PostClientstructure {
         body: JSON.stringify(postData),
       });
 
-      return await response.json();
+      const post = (await response.json()) as PostDto;
+
+      return { ...post, date: new Date(post.date) };
     } catch (error) {
       throw new Error("Failed to create New Post");
     }
