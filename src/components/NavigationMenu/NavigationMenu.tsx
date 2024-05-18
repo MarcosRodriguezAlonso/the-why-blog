@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import "./NavigationMenu.scss";
 
 const NavigationMenu = (): React.ReactElement => {
@@ -5,14 +6,10 @@ const NavigationMenu = (): React.ReactElement => {
     <nav className="navigation-menu">
       <ul>
         <li>
-          <a className="link active" href="list">
-            List
-          </a>
+          <NavLink to="/posts">Posts</NavLink>
         </li>
         <li>
-          <a className="link" href="add">
-            Add
-          </a>
+          <NavLink to="/create">Create Post</NavLink>
         </li>
       </ul>
     </nav>

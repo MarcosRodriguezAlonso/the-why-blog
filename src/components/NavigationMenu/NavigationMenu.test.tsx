@@ -4,19 +4,19 @@ import NavigationMenu from "./NavigationMenu";
 describe("Given the NavigationMenu component", () => {
   describe("When rendered", () => {
     test("Then it should show a link with 'Add'", () => {
-      const expectedLinkText = /add/i;
+      const expectedLinkText = /create post/i;
 
       render(<NavigationMenu />);
-      const link = screen.getByRole("link", { name: expectedLinkText });
+      const link = screen.getByRole("navigation", { name: expectedLinkText });
 
       expect(link).toBeInTheDocument();
     });
 
     test("Then it should show a link with 'List'", () => {
-      const expectedLinkText = /list/i;
+      const expectedLinkText = /posts/i;
 
       render(<NavigationMenu />);
-      const link = screen.getByRole("link", { name: expectedLinkText });
+      const link = screen.getByRole("navigation", { name: expectedLinkText });
 
       expect(link).toBeInTheDocument();
     });
