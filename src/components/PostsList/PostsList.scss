@@ -2,7 +2,7 @@
 
 .posts {
   margin: 0;
-  width: 320px;
+  max-width: 320px;
   padding: 30px;
   @include mixin.display-flex-column;
   gap: 20px;
