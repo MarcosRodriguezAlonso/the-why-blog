@@ -1,22 +1,29 @@
 import { render, screen } from "@testing-library/react";
 import NavigationMenu from "./NavigationMenu";
+import { MemoryRouter } from "react-router-dom";
 
 describe("Given the NavigationMenu component", () => {
   describe("When rendered", () => {
-    test("Then it should show a link with 'Add'", () => {
+    beforeEach(() => {
+      render(
+        <MemoryRouter>
+          <NavigationMenu />
+        </MemoryRouter>,
+      );
+    });
+
+    test("Then it should show a link with 'Create Post'", () => {
       const expectedLinkText = /create post/i;
 
-      render(<NavigationMenu />);
-      const link = screen.getByRole("navigation", { name: expectedLinkText });
+      const link = screen.getByRole("link", { name: expectedLinkText });
 
       expect(link).toBeInTheDocument();
     });
 
-    test("Then it should show a link with 'List'", () => {
+    test("Then it should show a link with 'Posts'", () => {
       const expectedLinkText = /posts/i;
 
-      render(<NavigationMenu />);
-      const link = screen.getByRole("navigation", { name: expectedLinkText });
+      const link = screen.getByRole("link", { name: expectedLinkText });
 
       expect(link).toBeInTheDocument();
     });

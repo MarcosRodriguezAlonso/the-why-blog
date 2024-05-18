@@ -1,0 +1,6 @@
+@use "../../styles/mixin";
+
+.post {
+  align-items: center;
+  @include mixin.display-flex-column;
+}
