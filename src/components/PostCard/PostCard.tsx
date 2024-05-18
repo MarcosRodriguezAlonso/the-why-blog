@@ -1,4 +1,5 @@
 import { Post } from "../../posts/types";
+import "./PostCard.scss";
 
 interface PostCardProps {
   post: Post;
