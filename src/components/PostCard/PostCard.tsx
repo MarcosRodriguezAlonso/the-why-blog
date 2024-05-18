@@ -12,17 +12,21 @@ const PostCard = ({ post }: PostCardProps): React.ReactElement => {
 
   return (
     <article className="post">
-      <h2 className="post__title">{post.title}</h2>
-      <span className="post__author">{post.author}</span>
-      <span className="post__date">{formattedDate}</span>
-      <img
-        className="post__image"
-        src={post.imageUrl}
-        alt={post.alternativeText}
-        width="150"
-        height="150"
-      />
-      <p className="post__content">{contentPreview}</p>
+      <h2 className="post__title">{`${post.title}?`}</h2>
+      <div className="post__data">
+        <img
+          className="post__image"
+          src={post.imageUrl}
+          alt={post.alternativeText}
+          width="150"
+          height="150"
+        />
+        <p className="post__content">{contentPreview}</p>
+      </div>
+      <div className="post__autorship">
+        <span className="post__author">{`Author: ${post.author}`}</span>
+        <span className="post__date">{`Created on: ${formattedDate}`}</span>
+      </div>
     </article>
   );
 };
