@@ -4,9 +4,7 @@ import { PostClientstructure } from "./types";
 class PostsClient implements PostClientstructure {
   async getPosts(): Promise<Post[]> {
     try {
-      const response = await fetch(
-        "https://the-why-blog-api.onrender.com/posts",
-      );
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/posts`);
       const posts = (await response.json()) as PostDto[];
 
       return posts.map<Post>((post) => ({

@@ -11,6 +11,11 @@
   &__data {
     display: flex;
     gap: 8px;
+
+    @media (width < 400px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__autorship {
