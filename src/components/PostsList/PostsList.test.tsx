@@ -29,7 +29,7 @@ describe("Given the PostList component", () => {
       render(<PostsList postsList={postsList} />);
 
       const expectedTittle = await screen.findByRole("heading", {
-        name: "Why the raccoon",
+        name: "Why the raccoon?",
       });
 
       expect(expectedTittle).toBeInTheDocument();
@@ -39,7 +39,7 @@ describe("Given the PostList component", () => {
       render(<PostsList postsList={postsList} />);
 
       const expectedTittle = await screen.findByRole("heading", {
-        name: "Why the platypus",
+        name: "Why the platypus?",
       });
 
       expect(expectedTittle).toBeInTheDocument();

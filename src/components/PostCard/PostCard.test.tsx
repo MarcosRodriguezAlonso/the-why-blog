@@ -29,8 +29,8 @@ describe("Given the PostCard component", () => {
   });
 
   describe("When it receives a post with 'Macario'", () => {
-    test("Then it should show a text with a'Macario'", () => {
-      const expectedAuthor = /macario/i;
+    test("Then it should show a text with a' Author: Macario'", () => {
+      const expectedAuthor = /author: macario/i;
 
       render(<PostCard post={post} />);
 
@@ -42,7 +42,7 @@ describe("Given the PostCard component", () => {
 
   describe("When it receives a post with a date:'3/5/2024' ", () => {
     test("Then it should show a date with '3/5/2024'", () => {
-      const expectedDate = "3/5/2024";
+      const expectedDate = "Created on: 3/5/2024";
 
       render(<PostCard post={post} />);
 
