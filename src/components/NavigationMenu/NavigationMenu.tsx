@@ -6,10 +6,14 @@ const NavigationMenu = (): React.ReactElement => {
     <nav className="navigation-menu">
       <ul>
         <li>
-          <NavLink to="/posts">Posts</NavLink>
+          <NavLink className={"link"} to="/posts">
+            Posts
+          </NavLink>
         </li>
         <li>
-          <NavLink to="/create">Create Post</NavLink>
+          <NavLink className={"link"} to="/create">
+            Create Post
+          </NavLink>
         </li>
       </ul>
     </nav>
