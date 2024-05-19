@@ -1,8 +1,11 @@
+import { useContext } from "react";
 import PostsList from "../../components/PostsList/PostsList";
-import { mockPosts } from "../../mocks/posts";
+import PostsContext from "../../Context/PostsContext";
 
 const PostsListPage = (): React.ReactElement => {
-  return <PostsList postsList={mockPosts} />;
+  const { posts } = useContext(PostsContext);
+
+  return <PostsList postsList={posts} />;
 };
 
 export default PostsListPage;
