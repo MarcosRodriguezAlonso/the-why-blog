@@ -1,0 +1,12 @@
+@use "../../styles/mixin";
+
+.form__container {
+  background-color: #b0ddc98a;
+  max-width: 450px;
+  max-width: 400px;
+  padding: 24px;
+  @include mixin.display-flex-column;
+  gap: 8px;
+  box-shadow: 0 0 8px #24272580;
+  border-radius: 5px;
+}
