@@ -1,14 +1,21 @@
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useEffect, useState } from "react";
 import PostsContext from "./PostsContext";
-import { mockPosts } from "../mocks/posts";
+import postClient from "../client/PostsClient";
+import { Post } from "../posts/types";
 
 const PostsContextProvider = ({
   children,
 }: PropsWithChildren): React.ReactElement => {
+  const [posts, setPosts] = useState<Post[]>([]);
+
+  useEffect(() => {
+    (async () => {
+      setPosts(await postClient.getPosts());
+    })();
+  }, []);
+
   return (
-    <PostsContext.Provider value={{ posts: mockPosts }}>
-      {children}
-    </PostsContext.Provider>
+    <PostsContext.Provider value={{ posts }}>{children}</PostsContext.Provider>
   );
 };
 
