@@ -1,0 +1,17 @@
+@use "../../styles/mixin";
+
+.form {
+  background-color: #b0ddc98a;
+  width: 650px;
+  height: 400px;
+  padding: 24px;
+  @include mixin.display-flex-column;
+  gap: 8px;
+  box-shadow: 0 0 8px #24272580;
+  border-radius: 5px;
+
+  @media (width < 400px) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
