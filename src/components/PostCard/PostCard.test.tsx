@@ -29,7 +29,7 @@ describe("Given the PostCard component", () => {
   });
 
   describe("When it receives a post with 'Macario'", () => {
-    test("Then it should show a text with a'Macario'", () => {
+    test("Then it should show a text' Author: Macario'", () => {
       const expectedAuthor = /author: macario/i;
 
       render(<PostCard post={post} />);

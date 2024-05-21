@@ -1,11 +1,11 @@
-import postClient from "../../client/PostsClient";
+import { useContext } from "react";
 import PostsList from "../../components/PostsList/PostsList";
-import { mockPosts } from "../../mocks/posts";
-
-const post = (await postClient.getPosts()) ?? mockPosts;
+import PostsContext from "../../Context/PostsContext";
 
 const PostsListPage = (): React.ReactElement => {
-  return <PostsList postsList={post} />;
+  const { posts } = useContext(PostsContext);
+
+  return <PostsList postsList={posts} />;
 };
 
 export default PostsListPage;

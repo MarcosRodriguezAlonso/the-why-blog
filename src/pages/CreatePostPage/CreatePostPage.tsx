@@ -1,7 +1,5 @@
-import CreatePostForm from "../../components/CreatePostForm/CreatePostForm";
-
 const CreatePostPage = (): React.ReactElement => {
-  return <CreatePostForm />;
+  return <h2>Create Post</h2>;
 };
 
 export default CreatePostPage;
