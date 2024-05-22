@@ -3,15 +3,46 @@
 .form {
   background-color: #b0ddc98a;
   width: 650px;
-  height: 400px;
+  height: 600px;
+  margin: 0 auto;
   padding: 24px;
   @include mixin.display-flex-column;
   gap: 8px;
   box-shadow: 0 0 8px #24272580;
   border-radius: 5px;
 
-  @media (width < 400px) {
+  @media (max-width: 650px) {
     flex-direction: column;
     align-items: center;
   }
+
+  &__group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+.form__group {
+  height: 80px;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__button {
+  background-color: #bdecb6;
+  width: 140px;
+  height: 70px;
+  align-self: center;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.form__imput {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #78a370;
+  border-radius: 8px;
+  font-size: 1rem;
 }
