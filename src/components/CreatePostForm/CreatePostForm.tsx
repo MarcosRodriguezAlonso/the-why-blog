@@ -13,13 +13,13 @@ const CreatePostForm = (): React.ReactElement => {
       </div>
       <div className="form__group">
         <label htmlFor="content" className="form__content">
-          Content:{" "}
+          Content:
         </label>
         <input className="form__imput" id="content" type="text" />
       </div>
       <div className="form__group">
         <label htmlFor="image" className="form__image">
-          Image Url:{" "}
+          Image Url:
         </label>
         <input className="form__imput" id="image" type="url" />
       </div>
