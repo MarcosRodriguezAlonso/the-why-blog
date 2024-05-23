@@ -18,8 +18,8 @@ const PostCard = ({ post }: PostCardProps): React.ReactElement => {
           className="post__image"
           src={post.imageUrl}
           alt={post.alternativeText}
-          width="150"
-          height="150"
+          width="200"
+          height="200"
         />
         <p className="post__content">{contentPreview}</p>
       </div>
