@@ -1,19 +1,21 @@
-.navigation-menu ul {
-  display: flex;
-  gap: 15px;
-}
-
-.link {
-  padding: 2px 5px;
-
-  &:hover {
-    background-color: #2e442e63;
-    border-radius: 5px;
+.navigation-menu {
+  &__links {
+    display: flex;
+    gap: 15px;
   }
-}
 
-.active {
-  background-color: #b0ddc98a;
-  border-bottom: 2px solid #2e442e;
-  border-radius: 5px;
+  &__link {
+    padding: 2px 5px;
+
+    &:hover {
+      background-color: #2e442e63;
+      border-radius: 5px;
+    }
+
+    &.active {
+      background-color: #b0ddc98a;
+      border-bottom: 2px solid #2e442e;
+      border-radius: 5px;
+    }
+  }
 }

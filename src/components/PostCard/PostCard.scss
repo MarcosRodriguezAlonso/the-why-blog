@@ -1,4 +1,5 @@
 @use "../../styles/mixin";
+@use "../../styles/variables";
 
 .post {
   background-color: #b0ddc98a;
@@ -8,8 +9,7 @@
   box-shadow: 0 0 8px #24272580;
   border-radius: 5px;
 
-  @media (width < 500px) {
-    width: 100%;
+  @media (width < variables.$screen-breakpoint) {
     box-shadow: none;
     border: 1px solid black;
     padding: 8px;
@@ -19,7 +19,7 @@
     display: flex;
     gap: 8px;
 
-    @media (width < 500px) {
+    @media (width < variables.$screen-breakpoint) {
       flex-direction: column;
       align-items: center;
     }
@@ -33,9 +33,10 @@
 
   &__image {
     object-fit: cover;
-    @media (width <500px) {
+
+    @media (width < variables.$screen-breakpoint) {
       width: 100%;
-      height: 200px;
+      height: 300px;
     }
   }
 }
