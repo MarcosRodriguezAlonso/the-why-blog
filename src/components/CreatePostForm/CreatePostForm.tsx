@@ -1,9 +1,15 @@
 import { useState } from "react";
 import "./CreatePostForm.scss";
-import { PostDto } from "../../posts/types";
+import { NewPostData } from "../../posts/types";
 
-const CreatePostForm = (): React.ReactElement => {
-  const [postData, setPostData] = useState<Omit<PostDto, "date" | "id">>({
+interface CreatePostFormProps {
+  submitPostData: (newPostData: NewPostData) => void;
+}
+
+const CreatePostForm = ({
+  submitPostData,
+}: CreatePostFormProps): React.ReactElement => {
+  const [postData, setPostData] = useState<NewPostData>({
     author: "",
     title: "",
     content: "",
@@ -17,7 +23,14 @@ const CreatePostForm = (): React.ReactElement => {
     });
 
   return (
-    <form className="form" autoComplete="off">
+    <form
+      className="form"
+      onSubmit={(event) => {
+        event.preventDefault();
+        submitPostData(postData);
+      }}
+      autoComplete="off"
+    >
       <div className="form__group">
         <label htmlFor="author">Author: </label>
         <input
