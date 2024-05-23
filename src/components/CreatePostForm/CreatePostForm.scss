@@ -1,4 +1,5 @@
 @use "../../styles/mixin";
+@use "../../styles/variables";
 
 .form {
   background-color: #b0ddc98a;
@@ -10,20 +11,20 @@
   box-shadow: 0 0 8px #24272580;
   border-radius: 5px;
 
-  @media (width < 650px) {
+  @media (width < variables.$PostForm-width) {
     width: 100%;
     flex-direction: column;
     align-items: center;
   }
 
   &__group {
-    display: flex;
-    flex-direction: column;
+    @include mixin.display-flex-column;
     gap: 10px;
     height: 80px;
     margin-bottom: 16px;
-    @media (width < 650px) {
-      width: 80vw;
+
+    @media (width < variables.$PostForm-width) {
+      width: 90vw;
     }
   }
 
@@ -32,6 +33,7 @@
     width: 140px;
     height: 70px;
     align-self: center;
+    border: 2px solid #333;
     border-radius: 8px;
     cursor: pointer;
   }

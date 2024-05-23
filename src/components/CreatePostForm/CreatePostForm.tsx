@@ -2,7 +2,7 @@ import "./CreatePostForm.scss";
 
 const CreatePostForm = (): React.ReactElement => {
   return (
-    <form className="form">
+    <form className="form" autoComplete="off">
       <div className="form__group">
         <label htmlFor="author">Author: </label>
         <input className="form__input" id="author" type="text" />
