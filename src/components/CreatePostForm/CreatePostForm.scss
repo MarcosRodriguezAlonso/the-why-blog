@@ -11,7 +11,7 @@
   box-shadow: 0 0 8px #24272580;
   border-radius: 5px;
 
-  @media (width < variables.$PostForm-width) {
+  @media (width < variables.$screen-breakpoint) {
     width: 100%;
     flex-direction: column;
     align-items: center;
@@ -23,7 +23,7 @@
     height: 80px;
     margin-bottom: 16px;
 
-    @media (width < variables.$PostForm-width) {
+    @media (width < variables.$screen-breakpoint) {
       width: 90vw;
     }
   }

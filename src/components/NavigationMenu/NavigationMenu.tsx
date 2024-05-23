@@ -4,14 +4,14 @@ import "./NavigationMenu.scss";
 const NavigationMenu = (): React.ReactElement => {
   return (
     <nav className="navigation-menu">
-      <ul>
+      <ul className="navigation-menu__links">
         <li>
-          <NavLink className={"link"} to="/posts">
+          <NavLink className="navigation-menu__link" to="/posts">
             Posts
           </NavLink>
         </li>
         <li>
-          <NavLink className={"link"} to="/create">
+          <NavLink className="navigation-menu__link" to="/create">
             Create Post
           </NavLink>
         </li>
