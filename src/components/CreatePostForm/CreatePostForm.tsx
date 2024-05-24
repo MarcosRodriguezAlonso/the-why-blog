@@ -1,35 +1,95 @@
+import { useState } from "react";
 import "./CreatePostForm.scss";
+import { NewPostData } from "../../posts/types";
 
-const CreatePostForm = (): React.ReactElement => {
+interface CreatePostFormProps {
+  submitPostData: (newPostData: NewPostData) => void;
+}
+
+const CreatePostForm = ({
+  submitPostData,
+}: CreatePostFormProps): React.ReactElement => {
+  const [postData, setPostData] = useState<NewPostData>({
+    author: "",
+    title: "",
+    content: "",
+    imageUrl: "",
+    alternativeText: "",
+  });
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) =>
+    setPostData((oldPostData) => {
+      return { ...oldPostData, [event.target.id]: event.target.value };
+    });
+
   return (
-    <form className="form" autoComplete="off">
+    <form
+      className="form"
+      onSubmit={(event) => {
+        event.preventDefault();
+        submitPostData(postData);
+      }}
+      autoComplete="off"
+    >
       <div className="form__group">
         <label htmlFor="author">Author: </label>
-        <input className="form__input" id="author" type="text" />
+        <input
+          value={postData.author}
+          onChange={handleChange}
+          className="form__input"
+          id="author"
+          type="text"
+        />
       </div>
       <div className="form__group">
         <label htmlFor="title">Title: </label>
-        <input className="form__input" id="title" type="text" />
+        <input
+          value={postData.title}
+          onChange={handleChange}
+          className="form__input"
+          id="title"
+          type="text"
+        />
       </div>
       <div className="form__group">
         <label htmlFor="content" className="form__content">
           Content:
         </label>
-        <input className="form__input" id="content" type="text" />
+        <input
+          value={postData.content}
+          onChange={handleChange}
+          className="form__input"
+          id="content"
+          type="text"
+        />
       </div>
       <div className="form__group">
-        <label htmlFor="image" className="form__image">
+        <label htmlFor="imageUrl" className="form__image">
           Image Url:
         </label>
-        <input className="form__input" id="image" type="url" />
+        <input
+          value={postData.imageUrl}
+          onChange={handleChange}
+          className="form__input"
+          id="imageUrl"
+          type="url"
+        />
       </div>
       <div className="form__group">
-        <label htmlFor="alternative-text" className="form__alternative-text">
-          Alternative Text:{" "}
+        <label htmlFor="alternativeText" className="form__alternative-text">
+          Alternative Text:
         </label>
-        <input className="form__input" id="alternative-text" type="text" />
+        <input
+          value={postData.alternativeText}
+          onChange={handleChange}
+          className="form__input"
+          id="alternativeText"
+          type="text"
+        />
       </div>
-      <button className="form__button">👉 Save Post</button>
+      <button type="submit" className="form__button">
+        👉 Save Post
+      </button>
     </form>
   );
 };

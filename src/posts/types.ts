@@ -13,3 +13,4 @@ export interface Post extends Omit<PostDto, "date"> {
 }
 
 export type PostDataWithoutId = Omit<Post, "id">;
+export type NewPostData = Omit<PostDto, "date" | "id">;

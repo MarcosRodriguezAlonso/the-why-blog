@@ -1,7 +1,14 @@
 import CreatePostForm from "../../components/CreatePostForm/CreatePostForm";
+import { NewPostData } from "../../posts/types";
 
-const CreatePostPage = (): React.ReactElement => {
-  return <CreatePostForm />;
+interface CreatePostFormProps {
+  submitData: (newPostData: NewPostData) => void;
+}
+
+const CreatePostPage = ({
+  submitData,
+}: CreatePostFormProps): React.ReactElement => {
+  return <CreatePostForm submitPostData={submitData} />;
 };
 
 export default CreatePostPage;
