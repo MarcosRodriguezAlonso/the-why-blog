@@ -5,31 +5,36 @@ const CreatePostForm = (): React.ReactElement => {
     <form className="form" autoComplete="off">
       <div className="form__group">
         <label htmlFor="author">Author: </label>
-        <input className="form__input" id="author" type="text" />
+        <input className="form__input" id="author" type="text" required />
       </div>
       <div className="form__group">
         <label htmlFor="title">Title: </label>
-        <input className="form__input" id="title" type="text" />
+        <input className="form__input" id="title" type="text" required />
       </div>
       <div className="form__group">
         <label htmlFor="content" className="form__content">
           Content:
         </label>
-        <input className="form__input" id="content" type="text" />
+        <input className="form__input" id="content" type="text" required />
       </div>
       <div className="form__group">
         <label htmlFor="image" className="form__image">
-          Image Url:
+          Image Url
         </label>
-        <input className="form__input" id="image" type="url" />
+        <input className="form__input" id="image" type="url" required />
       </div>
       <div className="form__group">
         <label htmlFor="alternative-text" className="form__alternative-text">
           Alternative Text:{" "}
         </label>
-        <input className="form__input" id="alternative-text" type="text" />
+        <input
+          className="form__input"
+          id="alternative-text"
+          type="text"
+          required
+        />
       </div>
-      <button className="form__button">👉 Save Post</button>
+      <button className="button form__button">👉 Create post</button>
     </form>
   );
 };

@@ -4,10 +4,9 @@
 .form {
   background-color: #b0ddc98a;
   width: 650px;
-  height: 600px;
+  gap: 10px;
   padding: 24px;
   @include mixin.display-flex-column;
-  justify-content: space-between;
   box-shadow: 0 0 8px #24272580;
   border-radius: 5px;
 
@@ -21,7 +20,6 @@
     @include mixin.display-flex-column;
     gap: 10px;
     height: 80px;
-    margin-bottom: 16px;
 
     @media (width < variables.$PostForm-width) {
       width: 90vw;
@@ -31,11 +29,9 @@
   &__button {
     background-color: #b6eccb;
     width: 140px;
-    height: 70px;
     align-self: center;
     border: 2px solid #333;
     border-radius: 8px;
-    cursor: pointer;
   }
 
   &__input {
@@ -43,6 +39,5 @@
     padding: 10px;
     border: 1px solid #78a370;
     border-radius: 8px;
-    font-size: 1rem;
   }
 }

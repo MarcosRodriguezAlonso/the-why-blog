@@ -37,20 +37,18 @@ li {
   list-style: none;
 }
 
-img {
-  object-fit: cover;
-}
-
 label {
   margin: 0;
   padding: 0;
 }
 
 input {
-  margin: 0;
+  font: inherit;
 }
 
 button {
   background: none;
   border: 0;
+  font: inherit;
+  cursor: pointer;
 }
